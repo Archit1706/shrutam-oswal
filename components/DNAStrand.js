@@ -38,18 +38,7 @@ export default function DNAStrand({ technologies }) {
                         transform: 'translateZ(0)'
                     }}
                 >
-                    <defs>
-                        <linearGradient id="strand-gradient-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.8" />
-                            <stop offset="50%" stopColor="#ec4899" stopOpacity="0.8" />
-                            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.8" />
-                        </linearGradient>
-                        <linearGradient id="strand-gradient-2" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8" />
-                            <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.8" />
-                            <stop offset="100%" stopColor="#6366f1" stopOpacity="0.8" />
-                        </linearGradient>
-                    </defs>
+
 
                     {/* Connecting rungs between strands (horizontal lines) */}
                     {[...Array(40)].map((_, i) => {

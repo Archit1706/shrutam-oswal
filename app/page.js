@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 overflow-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,10 +23,10 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <Link href="/" className="text-white hover:text-purple-400 transition-colors">Home</Link>
-                <Link href="/about" className="text-gray-300 hover:text-purple-400 transition-colors">About</Link>
-                <Link href="/experience" className="text-gray-300 hover:text-purple-400 transition-colors">Experience</Link>
-                <Link href="/projects" className="text-gray-300 hover:text-purple-400 transition-colors">Projects</Link>
+                <Link href="/" className="text-white hover:text-teal-400 transition-colors">Home</Link>
+                <Link href="/about" className="text-gray-300 hover:text-teal-400 transition-colors">About</Link>
+                <Link href="/experience" className="text-gray-300 hover:text-teal-400 transition-colors">Experience</Link>
+                <Link href="/projects" className="text-gray-300 hover:text-teal-400 transition-colors">Projects</Link>
               </div>
             </div>
           </div>
@@ -43,10 +43,10 @@ export default function Home() {
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
                   {personalInfo.name}
                 </h1>
-                <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                <div className="h-1 w-24 bg-gradient-to-r from-teal-500 to-lime-500 rounded-full"></div>
               </div>
 
-              <p className={`text-2xl sm:text-3xl text-purple-300 font-light transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <p className={`text-2xl sm:text-3xl text-teal-300 font-light transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {personalInfo.tagline}
               </p>
 
@@ -79,13 +79,13 @@ export default function Home() {
               <div className={`flex flex-col sm:flex-row gap-4 pt-6 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
                   href="/projects"
-                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 text-center"
+                  className="px-8 py-3 bg-gradient-to-r from-teal-500 to-lime-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105 text-center"
                 >
                   View Projects
                 </Link>
                 <Link
                   href="/experience"
-                  className="px-8 py-3 border-2 border-purple-400 text-purple-300 rounded-full font-semibold hover:bg-purple-400/10 transition-all duration-300 hover:scale-105 text-center"
+                  className="px-8 py-3 border-2 border-teal-400 text-teal-300 rounded-full font-semibold hover:bg-teal-400/10 transition-all duration-300 hover:scale-105 text-center"
                 >
                   Experience
                 </Link>
@@ -101,8 +101,8 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-purple-400 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-teal-400 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function Home() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>

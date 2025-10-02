@@ -142,14 +142,14 @@ export const projects = {
 
 ### Colors
 
-The portfolio uses a purple/pink gradient theme. To customize colors, update:
+The portfolio uses a teal/lime gradient theme. To customize colors, update:
 
 1. **CSS Variables** in `app/globals.css`:
 
     ```css
     :root {
-        --purple: #a855f7;
-        --pink: #ec4899;
+        --teal: #a855f7;
+        --lime: #ec4899;
     }
     ```
 

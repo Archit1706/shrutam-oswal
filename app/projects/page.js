@@ -38,19 +38,19 @@ export default function Projects() {
     const currentProject = currentProjects[currentProjectIndex];
 
     return (
-        <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        <Link href="/" className="text-white font-bold text-xl hover:text-purple-400 transition-colors">
+                        <Link href="/" className="text-white font-bold text-xl hover:text-teal-400 transition-colors">
                             {personalInfo.name.split(' ')[0]}
                         </Link>
                         <div className="hidden md:flex items-center space-x-8">
-                            <Link href="/" className="text-gray-300 hover:text-purple-400 transition-colors">Home</Link>
-                            <Link href="/about" className="text-gray-300 hover:text-purple-400 transition-colors">About</Link>
-                            <Link href="/experience" className="text-gray-300 hover:text-purple-400 transition-colors">Experience</Link>
-                            <Link href="/projects" className="text-white hover:text-purple-400 transition-colors">Projects</Link>
+                            <Link href="/" className="text-gray-300 hover:text-teal-400 transition-colors">Home</Link>
+                            <Link href="/about" className="text-gray-300 hover:text-teal-400 transition-colors">About</Link>
+                            <Link href="/experience" className="text-gray-300 hover:text-teal-400 transition-colors">Experience</Link>
+                            <Link href="/projects" className="text-white hover:text-teal-400 transition-colors">Projects</Link>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default function Projects() {
                     {/* Header */}
                     <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Project Portfolio</h1>
-                        <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-8"></div>
+                        <div className="h-1 w-24 bg-gradient-to-r from-teal-500 to-lime-500 rounded-full mx-auto mb-8"></div>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                             Explore my work across mechatronics, mechanical design, and robotics
                         </p>
@@ -115,7 +115,7 @@ export default function Projects() {
                                 </button>
 
                                 <div className="text-center">
-                                    <p className="text-purple-300 text-sm font-semibold mb-1">{currentProject.tier}</p>
+                                    <p className="text-teal-300 text-sm font-semibold mb-1">{currentProject.tier}</p>
                                     <p className="text-gray-400 text-sm">
                                         Project {currentProjectIndex + 1} of {currentProjects.length}
                                     </p>
@@ -141,7 +141,7 @@ export default function Projects() {
                                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                                                 {currentProject.title}
                                             </h2>
-                                            <p className="text-xl text-purple-300 font-semibold mb-3">
+                                            <p className="text-xl text-teal-300 font-semibold mb-3">
                                                 {currentProject.subtitle}
                                             </p>
                                             <p className="text-gray-400 text-sm">
@@ -164,10 +164,10 @@ export default function Projects() {
                                     {Object.entries(currentProject.sections).map(([sectionTitle, sectionContent], index) => (
                                         <div
                                             key={index}
-                                            className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+                                            className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300"
                                         >
                                             <h3 className="text-lg font-bold text-white mb-3 flex items-center">
-                                                <span className="text-purple-400 mr-2">▸</span>
+                                                <span className="text-teal-400 mr-2">▸</span>
                                                 {sectionTitle}
                                             </h3>
                                             <p className="text-gray-300 text-sm leading-relaxed">{sectionContent}</p>
@@ -178,14 +178,14 @@ export default function Projects() {
                                 {/* Technologies */}
                                 <div>
                                     <h3 className="text-lg font-bold text-white mb-3 flex items-center">
-                                        <span className="text-purple-400 mr-2">🛠️</span>
+                                        <span className="text-teal-400 mr-2">🛠️</span>
                                         Technologies & Tools
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {currentProject.technologies.map((tech, index) => (
                                             <span
                                                 key={index}
-                                                className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-400/30 hover:bg-purple-500/30 hover:scale-105 transition-all duration-300"
+                                                className="px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-semibold border border-teal-400/30 hover:bg-teal-500/30 hover:scale-105 transition-all duration-300"
                                             >
                                                 {tech}
                                             </span>
@@ -197,14 +197,14 @@ export default function Projects() {
                                 {currentProject.metrics && Object.keys(currentProject.metrics).length > 0 && (
                                     <div>
                                         <h3 className="text-lg font-bold text-white mb-3 flex items-center">
-                                            <span className="text-purple-400 mr-2">📊</span>
+                                            <span className="text-teal-400 mr-2">📊</span>
                                             Key Metrics
                                         </h3>
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                             {Object.entries(currentProject.metrics).map(([key, value], index) => (
                                                 <div
                                                     key={index}
-                                                    className="bg-white/5 rounded-xl p-4 border border-white/10 text-center hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                                                    className="bg-white/5 rounded-xl p-4 border border-white/10 text-center hover:border-teal-400/50 transition-all duration-300 hover:scale-105"
                                                 >
                                                     <p className="text-2xl font-bold text-white mb-1">{value}</p>
                                                     <p className="text-gray-400 text-xs">{key}</p>
@@ -217,7 +217,7 @@ export default function Projects() {
                                 {/* Achievements */}
                                 <div>
                                     <h3 className="text-lg font-bold text-white mb-3 flex items-center">
-                                        <span className="text-purple-400 mr-2">🎯</span>
+                                        <span className="text-teal-400 mr-2">🎯</span>
                                         Key Achievements
                                     </h3>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -241,7 +241,7 @@ export default function Projects() {
                                         key={index}
                                         onClick={() => setCurrentIndex(prev => ({ ...prev, [activeCategory]: index }))}
                                         className={`h-2 rounded-full transition-all duration-300 ${index === currentProjectIndex
-                                            ? 'w-8 bg-purple-500'
+                                            ? 'w-8 bg-teal-500'
                                             : 'w-2 bg-white/20 hover:bg-white/40'
                                             }`}
                                         aria-label={`Go to project ${index + 1}`}
@@ -253,7 +253,7 @@ export default function Projects() {
 
                     {/* Summary Stats */}
                     <div className={`mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div className="bg-gradient-to-r from-teal-500/10 to-lime-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                             <h2 className="text-2xl font-bold text-white mb-6 text-center">Portfolio Overview</h2>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                 {[
@@ -264,7 +264,7 @@ export default function Projects() {
                                 ].map((stat, index) => (
                                     <div
                                         key={index}
-                                        className="text-center bg-white/5 rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                                        className="text-center bg-white/5 rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105"
                                     >
                                         <div className="text-4xl mb-3">{stat.icon}</div>
                                         <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>

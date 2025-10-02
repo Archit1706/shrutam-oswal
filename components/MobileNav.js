@@ -17,7 +17,7 @@ export default function MobileNav() {
             {/* Mobile Menu Button */}
             <button
                 onClick={toggleMenu}
-                className="md:hidden fixed top-4 right-4 z-50 w-12 h-12 bg-purple-500/20 backdrop-blur-md rounded-full flex items-center justify-center border border-purple-400/30 hover:bg-purple-500/30 transition-all duration-300"
+                className="md:hidden fixed top-4 right-4 z-50 w-12 h-12 bg-teal-500/20 backdrop-blur-md rounded-full flex items-center justify-center border border-teal-400/30 hover:bg-teal-500/30 transition-all duration-300"
                 aria-label="Toggle menu"
             >
                 <div className="w-6 h-5 relative flex flex-col justify-between">
@@ -49,7 +49,7 @@ export default function MobileNav() {
 
                 {/* Menu Content */}
                 <div
-                    className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-l border-white/10 shadow-2xl transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+                    className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 border-l border-white/10 shadow-2xl transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
                         }`}
                 >
                     {/* Header */}
@@ -57,7 +57,7 @@ export default function MobileNav() {
                         <h2 className="text-2xl font-bold text-white mb-1">
                             {personalInfo.name}
                         </h2>
-                        <p className="text-purple-300 text-sm">{personalInfo.title}</p>
+                        <p className="text-teal-300 text-sm">{personalInfo.title}</p>
                     </div>
 
                     {/* Navigation Links */}
@@ -76,14 +76,14 @@ export default function MobileNav() {
                                             href={item.href}
                                             onClick={closeMenu}
                                             className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${isActive
-                                                ? 'bg-purple-500/20 text-white border border-purple-400/30'
+                                                ? 'bg-teal-500/20 text-white border border-teal-400/30'
                                                 : 'text-gray-300 hover:bg-white/5 hover:text-white'
                                                 }`}
                                         >
                                             <span className="text-2xl">{item.icon}</span>
                                             <span className="font-semibold">{item.name}</span>
                                             {isActive && (
-                                                <span className="ml-auto w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
+                                                <span className="ml-auto w-2 h-2 bg-teal-500 rounded-full animate-pulse" />
                                             )}
                                         </Link>
                                     </li>
@@ -97,14 +97,14 @@ export default function MobileNav() {
                         <div className="space-y-3">
                             <a
                                 href={`mailto:${personalInfo.email}`}
-                                className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                                className="flex items-center gap-2 text-gray-300 hover:text-teal-400 transition-colors text-sm"
                             >
                                 <span>✉</span>
                                 {personalInfo.email}
                             </a>
                             <a
                                 href={`tel:${personalInfo.phone}`}
-                                className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                                className="flex items-center gap-2 text-gray-300 hover:text-teal-400 transition-colors text-sm"
                             >
                                 <span>☎</span>
                                 {personalInfo.phone}

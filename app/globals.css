@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --teal: #14b8a6;
+  --lime: #84cc16;
 }
 
 @theme inline {
@@ -23,12 +25,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  /* Ensure the body takes up the full viewport and has a smooth scroll behavior */
   min-height: 100vh;
   scroll-behavior: smooth;
 }
 
-/* Custom CSS for DNA Strand Animation (Placeholder for a complex three.js/webgl effect) */
+/* Custom CSS for DNA Strand Animation */
 .dna-container {
   position: relative;
   width: 300px;
@@ -55,7 +56,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
 }
 
 @keyframes rotateDNA {
@@ -67,7 +68,34 @@ body {
   }
 }
 
+@keyframes pulse {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 0.3; 
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.2); 
+    opacity: 0.5; 
+  }
+}
+
 /* Smooth Transition for Hover Effects */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide in animations for mobile nav */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out forwards;
 }

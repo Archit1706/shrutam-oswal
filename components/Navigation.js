@@ -14,11 +14,11 @@ export default function Navigation() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="text-white font-bold text-xl hover:text-purple-400 transition-colors group"
+                        className="text-white font-bold text-xl hover:text-teal-400 transition-colors group"
                     >
                         <span className="relative">
                             {personalInfo.name.split(' ')[0]}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-500 to-lime-500 group-hover:w-full transition-all duration-300"></span>
                         </span>
                     </Link>
 
@@ -41,8 +41,8 @@ export default function Navigation() {
                                     </span>
                                     {isActive && (
                                         <>
-                                            <span className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg" />
-                                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500" />
+                                            <span className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-lime-500/20 rounded-lg" />
+                                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal-500 to-lime-500" />
                                         </>
                                     )}
                                 </Link>

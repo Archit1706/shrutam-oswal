@@ -13,19 +13,19 @@ export default function About() {
     }, []);
 
     return (
-        <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        <Link href="/" className="text-white font-bold text-xl hover:text-purple-400 transition-colors">
+                        <Link href="/" className="text-white font-bold text-xl hover:text-teal-400 transition-colors">
                             {personalInfo.name.split(' ')[0]}
                         </Link>
                         <div className="hidden md:flex items-center space-x-8">
-                            <Link href="/" className="text-gray-300 hover:text-purple-400 transition-colors">Home</Link>
-                            <Link href="/about" className="text-white hover:text-purple-400 transition-colors">About</Link>
-                            <Link href="/experience" className="text-gray-300 hover:text-purple-400 transition-colors">Experience</Link>
-                            <Link href="/projects" className="text-gray-300 hover:text-purple-400 transition-colors">Projects</Link>
+                            <Link href="/" className="text-gray-300 hover:text-teal-400 transition-colors">Home</Link>
+                            <Link href="/about" className="text-white hover:text-teal-400 transition-colors">About</Link>
+                            <Link href="/experience" className="text-gray-300 hover:text-teal-400 transition-colors">Experience</Link>
+                            <Link href="/projects" className="text-gray-300 hover:text-teal-400 transition-colors">Projects</Link>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ export default function About() {
                     {/* Header */}
                     <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">About Me</h1>
-                        <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-8"></div>
+                        <div className="h-1 w-24 bg-gradient-to-r from-teal-500 to-lime-500 rounded-full mx-auto mb-8"></div>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                             {personalInfo.summary}
                         </p>
@@ -52,12 +52,12 @@ export default function About() {
                             {education.map((edu, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20"
+                                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-500/20"
                                 >
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
                                             <h3 className="text-xl font-bold text-white mb-1">{edu.degree}</h3>
-                                            <p className="text-purple-300 font-semibold">{edu.field}</p>
+                                            <p className="text-teal-300 font-semibold">{edu.field}</p>
                                         </div>
                                         <span className="text-3xl">{edu.icon}</span>
                                     </div>
@@ -65,12 +65,12 @@ export default function About() {
                                     <p className="text-gray-400 text-sm mb-2">{edu.location}</p>
                                     <p className="text-gray-400 text-sm mb-3">{edu.duration}</p>
                                     {edu.gpa && (
-                                        <p className="text-purple-300 font-semibold mb-3">GPA: {edu.gpa}</p>
+                                        <p className="text-teal-300 font-semibold mb-3">GPA: {edu.gpa}</p>
                                     )}
                                     <ul className="space-y-2">
                                         {edu.highlights.map((highlight, hIndex) => (
                                             <li key={hIndex} className="text-gray-300 text-sm flex items-start">
-                                                <span className="text-purple-400 mr-2">▹</span>
+                                                <span className="text-teal-400 mr-2">▹</span>
                                                 <span>{highlight}</span>
                                             </li>
                                         ))}
@@ -94,8 +94,8 @@ export default function About() {
                                     key={category}
                                     onClick={() => setActiveSkillCategory(category)}
                                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeSkillCategory === category
-                                            ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/50'
-                                            : 'bg-white/5 text-gray-300 hover:bg-white/10'
+                                        ? 'bg-gradient-to-r from-teal-500 to-lime-500 text-white shadow-lg shadow-teal-500/50'
+                                        : 'bg-white/5 text-gray-300 hover:bg-white/10'
                                         }`}
                                 >
                                     {category}
@@ -108,7 +108,7 @@ export default function About() {
                             {skills[activeSkillCategory].map((skill, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 text-center"
+                                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-teal-500/20 text-center"
                                     style={{ animationDelay: `${index * 50}ms` }}
                                 >
                                     <p className="text-white font-semibold text-sm">{skill}</p>
@@ -129,10 +129,10 @@ export default function About() {
                                 {certifications.map((cert, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105"
                                     >
                                         <h3 className="text-lg font-bold text-white mb-2">{cert.name}</h3>
-                                        <p className="text-purple-300 font-semibold mb-1">{cert.issuer}</p>
+                                        <p className="text-teal-300 font-semibold mb-1">{cert.issuer}</p>
                                         <p className="text-gray-400 text-sm mb-3">{cert.date}</p>
                                         <p className="text-gray-300 text-sm">{cert.description}</p>
                                     </div>
@@ -150,10 +150,10 @@ export default function About() {
                                 {awards.map((award, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                                        className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105"
                                     >
                                         <h3 className="text-lg font-bold text-white mb-2">{award.title}</h3>
-                                        <p className="text-purple-300 font-semibold mb-1">{award.organization}</p>
+                                        <p className="text-teal-300 font-semibold mb-1">{award.organization}</p>
                                         <p className="text-gray-400 text-sm mb-3">{award.year}</p>
                                         <p className="text-gray-300 text-sm">{award.description}</p>
                                     </div>
@@ -163,33 +163,33 @@ export default function About() {
                     </div>
 
                     {/* Contact Info */}
-                    <section className={`mt-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <section className={`mt-20 bg-gradient-to-r from-teal-500/10 to-lime-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="flex items-center space-x-3">
-                                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center">
                                     <span className="text-xl">📧</span>
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">Email</p>
-                                    <a href={`mailto:${personalInfo.email}`} className="text-white hover:text-purple-400 transition-colors">
+                                    <a href={`mailto:${personalInfo.email}`} className="text-white hover:text-teal-400 transition-colors">
                                         {personalInfo.email}
                                     </a>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center">
                                     <span className="text-xl">📱</span>
                                 </div>
                                 <div>
                                     <p className="text-gray-400 text-sm">Phone</p>
-                                    <a href={`tel:${personalInfo.phone}`} className="text-white hover:text-purple-400 transition-colors">
+                                    <a href={`tel:${personalInfo.phone}`} className="text-white hover:text-teal-400 transition-colors">
                                         {personalInfo.phone}
                                     </a>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center">
                                     <span className="text-xl">📍</span>
                                 </div>
                                 <div>
