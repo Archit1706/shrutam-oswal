@@ -793,5 +793,6 @@ export const navigation = [
     { name: 'About', href: '/about', icon: '👤' },
     { name: 'Experience', href: '/experience', icon: '💼' },
     { name: 'Projects', href: '/projects', icon: '🚀' },
+    { name: 'Resume', href: '/resume', icon: '📄' },
     { name: 'Contact', href: '/contact', icon: '📧' }
 ];

@@ -26,6 +26,8 @@ export default function Experience() {
                             <Link href="/about" className="text-gray-300 hover:text-teal-400 transition-colors">About</Link>
                             <Link href="/experience" className="text-white hover:text-teal-400 transition-colors">Experience</Link>
                             <Link href="/projects" className="text-gray-300 hover:text-teal-400 transition-colors">Projects</Link>
+                            <Link href="/resume" className="text-gray-300 hover:text-teal-400 transition-colors">Resume</Link>
+                            <Link href="/contact" className="text-gray-300 hover:text-teal-400 transition-colors">Contact</Link>
                         </div>
                     </div>
                 </div>
